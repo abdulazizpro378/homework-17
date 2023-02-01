@@ -327,6 +327,13 @@
   border-radius: 10px;
   max-width: 400px;
   padding: 36px 30px 30px;
+  transition: 0.4s;
+}
+
+/* --------- */
+
+.hero-card:hover {
+  box-shadow: 1px 15px 20px 2px rgb(245 56 56 / 35%);
 }
 
 .hero-img {
