@@ -1,0 +1,142 @@
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  top: 0;
+  z-index: 3;
+
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px 0;
+}
+
+
+.menu i {
+  color: black;
+  font-size: 40px;
+}
+
+.nav,
+.navbar-right {
+  display: none;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin-left: 10px;
+  color: var(--main-color);
+}
+
+.nav a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 5px 0;
+  margin: 0 20px;
+  line-height: 19px;
+  position: relative;
+  color: var(--help-color);
+}
+
+.nav a::before {
+  content: "";
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+  bottom: 0;
+  background-color: #f53855;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: 0.4s;
+  position: absolute;
+}
+
+nav a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.navbar-right p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  margin-right: 30px;
+  color: var(--main-color);
+}
+
+.navbar-right button {
+  font-style: normal;
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  background-color: transparent;
+  padding: 13px 35px;
+  border: 1px solid #f53855;
+  border-radius: 50px;
+  color: #f53855;
+  position: relative;
+}
+
+span {
+  background-color: #f53855;
+  height: 100%;
+  width: 0;
+  border-radius: 50px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.navbar-right button:hover span {
+  width: 100%;
+  color: whitesmoke;
+}
+
+.navbar-right button:hover {
+  border: none;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+  .menu {
+    display: none;
+  }
+
+  .nav,
+  .navbar-right {
+    display: block;
+  }
+
+  .nav,
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .about-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  
+  
+}
